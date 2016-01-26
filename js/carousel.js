@@ -43,9 +43,6 @@
             self = this,
             duration = this.options.duration,
             $dot = this.$dot;
-        console.log("***************");
-        console.log(curIndex);
-        console.log(self.total);
         this.children.eq(curIndex).animate({
             "opacity": 0
         }, (duration/2), function(){
