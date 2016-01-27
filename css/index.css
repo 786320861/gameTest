@@ -66,6 +66,18 @@ body {
     color: #ffffff;
     background: dimgray; }
 
+.arrowNav {
+  width: 100px;
+  height: 50px;
+  background-position: -309px 0;
+  position: fixed;
+  z-index: 100;
+  cursor: pointer;
+  left: 50%;
+  margin-left: -50px;
+  top: 0;
+  display: none; }
+
 .sSection {
   position: relative; }
   .sSection .downArrow {
@@ -151,5 +163,64 @@ body {
       margin-right: 20px; }
       .sectionThree .control li.active, .sectionThree .control li:hover {
         background-position: -7px -248px; }
+
+.sectionFour {
+  height: 1020px;
+  background: url("../images/wrap4.jpg") no-repeat center; }
+  .sectionFour .sectionFourInner {
+    background: url("../images/main4.jpg") no-repeat center;
+    height: 100%;
+    margin-left: -500px; }
+  .sectionFour ul {
+    height: 616px;
+    margin-top: 300px;
+    position: relative;
+    width: 1126px;
+    margin-left: -63px;
+    cursor: pointer; }
+    .sectionFour ul li {
+      position: absolute; }
+      .sectionFour ul li.active {
+        z-index: 10; }
+      .sectionFour ul li.first, .sectionFour ul li.four {
+        z-index: 5;
+        width: 706px;
+        top: 90px;
+        left: -130px; }
+      .sectionFour ul li.two, .sectionFour ul li.three {
+        z-index: 4;
+        width: 576px;
+        top: 140px;
+        left: -280px; }
+      .sectionFour ul li.first {
+        z-index: 5;
+        left: 530px; }
+      .sectionFour ul li.two {
+        z-index: 4;
+        left: 810px; }
+      .sectionFour ul li img {
+        width: 100%;
+        height: auto; }
+
+.dotNav {
+  position: fixed;
+  width: 41px;
+  height: 175px;
+  padding: 39px 0 0 0;
+  background-position: 0 0;
+  right: 30px;
+  top: 50%;
+  margin-top: -107px;
+  text-align: center; }
+  .dotNav li {
+    width: 19px;
+    height: 19px;
+    background-position: -11px -79px;
+    margin-bottom: 15px;
+    cursor: pointer; }
+    .dotNav li.active {
+      background-position: -11px -39px; }
+    .dotNav li:hover {
+      background-position: -11px -39px; }
 
 /*# sourceMappingURL=index.css.map */
