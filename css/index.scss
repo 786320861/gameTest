@@ -11,7 +11,9 @@ body {
   color: $normalBlack;
   font-family: 'microsoft yahei';
 }
-
+h1,h2,h3,h4,h5{
+  font-weight: normal;
+}
 .w1000 {
   width: 1000px;
 }
@@ -41,13 +43,15 @@ body {
   display: block;
 }
 
-.sicon {
+.sicon, .icon {
   *display: inline;
   *zoom: 1;
   display: inline-block;
   background: url("../images/icons.png") no-repeat;
 }
-
+.icon{
+  background: url("../images/icon.png") no-repeat;
+}
 .header {
   height: 86px;
   background: #131313;
@@ -255,6 +259,7 @@ body {
   top: 50%;
   margin-top: -107px;
   text-align: center;
+  z-index: 100;
   li{
     width: 19px;
     height: 19px;
@@ -266,6 +271,46 @@ body {
     }
     &:hover{
       background-position: -11px -39px;
+    }
+  }
+}
+.footer{
+  background: #171717;
+  padding: 35px 0;
+  ul{
+    margin: 0 auto;
+    li{
+      float: left;
+      width: 180px ;
+      margin: 0 30px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .icon{
+      width: 45px;
+      height: 45px;
+      background-position: -152px -147px;
+      &.buluo{
+        background-position: -244px -325px;
+      }
+      &.kefu{
+        background-position: -152px -192px;
+      }
+      &.fuwu{
+        background-position: -152px -237px;
+      }
+    }
+
+    h4{
+      font-size: 18px;
+      color: #e1e1e1;
+      margin: 15px 0 0;
+    }
+    p{
+      font-size: 12px;
+      color: #6a6a6a;
+      padding:0px 20px;
+      line-height: 1.6;
     }
   }
 }
