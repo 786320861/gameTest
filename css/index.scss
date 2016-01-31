@@ -314,3 +314,57 @@ h1,h2,h3,h4,h5{
     }
   }
 }
+
+/*modal begin*/
+#modalBg{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(17,17,17, .7);
+  z-index: 999;
+  display: none;
+}
+.modalShow{
+  display: none;
+  padding: 30px;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -250px;
+  background: #ffffff;
+  .modalClose{
+    background-position: -255px -287px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  .codeArea{
+    width: 130px;
+    height: 130px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .codeRight{
+    color: #666;
+    width: 305px;
+    font-size: 12px;
+    padding: 10px 0 0 5px;
+    h4{
+      font-size: 18px;
+      margin: 0;
+    }
+    ul{
+      margin-top: 5px;
+      line-height: 2;
+    }
+  }
+}

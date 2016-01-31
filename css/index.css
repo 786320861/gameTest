@@ -261,4 +261,51 @@ h1, h2, h3, h4, h5 {
       padding: 0px 20px;
       line-height: 1.6; }
 
+/*modal begin*/
+#modalBg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(17, 17, 17, 0.7);
+  z-index: 999;
+  display: none; }
+
+.modalShow {
+  display: none;
+  padding: 30px;
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -250px;
+  background: #ffffff; }
+  .modalShow .modalClose {
+    background-position: -255px -287px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px; }
+  .modalShow .codeArea {
+    width: 130px;
+    height: 130px; }
+    .modalShow .codeArea img {
+      width: 100%;
+      height: 100%; }
+  .modalShow .codeRight {
+    color: #666;
+    width: 305px;
+    font-size: 12px;
+    padding: 10px 0 0 5px; }
+    .modalShow .codeRight h4 {
+      font-size: 18px;
+      margin: 0; }
+    .modalShow .codeRight ul {
+      margin-top: 5px;
+      line-height: 2; }
+
 /*# sourceMappingURL=index.css.map */
