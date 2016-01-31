@@ -12,7 +12,8 @@
             "anchorElement": "a", //操作的子元素标签名称
             "navAnchor": true,   //导航和锚点定位是否一致，如果不一致，传入导航的id
             "monitorArr": [], //监听元素的id数组，按照顺序传递
-            "navControl": "arrowNav"  //当导航条隐藏时，控制其显示的按钮的id
+            "navControl": "arrowNav",  //当导航条隐藏时，控制其显示的按钮的id
+            "posBtn": "downArrow"  //点击定位的按钮的class
         };
         var _this = $(this);
         options = $.extend({}, _default, options);
@@ -170,7 +171,8 @@
                         }
                     });
                     /*点击定位到某个区域*/
-                    $(self).click(function (ev) {
+
+                    $(self).click(function (ev) { //点定位
                         ev = ev || window.event;
                         var target = ev.target || ev.srcElement;
                         if (target.tagName.toLowerCase() == tagName) {
@@ -179,19 +181,26 @@
                             _this.fixIndex(index);
                         }
                     });
+                    $("." + options.posBtn).each(function (index, dom) {
+                        (function (index) {
+                            $(dom).click(function () {
+                                _this.fixIndex(index+1);
+                            })
+                        })(index);
+                    });
                     /*点击导航按钮显示头部导航*/
                     $navControl.click(function () {
                         var $that = $(this);
                         $that.animate({
                             "opacity": 0
-                        }, 1000, function(){
+                        }, 1000, function () {
                             $that.hide();
                             $header.css({
                                 "position": "fixed",
                                 "top": "0",
                                 "left": "0",
                                 "width": "100%",
-                                "z-index":100
+                                "z-index": 100
                             }).show(300);
                         })
                     });
